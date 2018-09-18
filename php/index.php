@@ -1,8 +1,27 @@
 <?php
-$var1 = 1;
+/*$var1 = 1;
 $name = 'Juan Fernando Ordóñez Arroyave';
-var_dump($name);
-echo "Impresión "."concatenadas $name";
+//var_dump($name);
+//echo "Impresión "."concatenadas $name";
+$jobs = [
+  'PHP Developer',
+  'Python Developer',
+  'JS Developer',
+];*/
+//var_dump($jobs);
+
+//Si el archivo no existe lo omite y solo genera warning
+//En cambio requiere si da error en caso de que el archivo no exista
+include('jobs.php');
+
+echo $jobs[0]['title'];
+
+$job = 'De Juan';
+function printJob($v){
+  echo " Algo $v";
+}
+
+printJob($job);
 ?>
 
 <!doctype html>
