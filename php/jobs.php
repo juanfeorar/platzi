@@ -1,10 +1,19 @@
 <?php
-class Job
+
+require 'app/models/Job.php';
+require 'app/models/Projects.php';
+
+class Jobs
 {
     private $title;
     public $descriotion;
     public $visible;
     public $month;
+
+    public function __construct($title, $descriotion) {
+        $this->title = $title;
+        $this->descriotion = $descriotion;
+    }
 
     public function setTitle($title)
     {
@@ -17,12 +26,14 @@ class Job
     }
 }
 
-$job1 = new Job();
+$job1 = new Jobs('PHP Developer', 'Thisis an awesome job!!!');
 $job1->setTitle("PHP Developer");
 $job1->descriotion = 'Thisis an awesome job!!!';
 $job1->visible = true;
 $job1->month = 16;
 echo $job1->getTitle();
+
+//$project1 = new Project('Hola', 'Qe tal');
 
 // $jobs = [
 //     [
